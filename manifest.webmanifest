@@ -1,8 +1,8 @@
 {
   "name": "ClassSeats",
   "short_name": "ClassSeats",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "/ClassSeatsMobile",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#1f1b3a",
   "theme_color": "#4c1d95",
