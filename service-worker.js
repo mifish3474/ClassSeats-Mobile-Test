@@ -1,4 +1,4 @@
-const BUILD_REV = '1d03d3664fbe462d980a4ff37c94b35b7355dd76'
+const BUILD_REV = '6ebe3c4e4772402b4439f3152b817604ce3190b0'
 const CACHE_NAME = `classseats-pwa-${BUILD_REV}`
 const CORE_ASSETS = [
   './',
