@@ -1,0 +1,22 @@
+{
+  "schema": 1,
+  "messages": [
+    {
+      "id": "onb-2026-02-welcome",
+      "audience": "onboarding",
+      "publishedAt": "2026-02-15T00:00:00Z",
+      "title": "Welcome to ClassSeats 👋",
+      "body": "Your data stays on this device and (optionally) in your Google Drive. No student data is stored on ClassSeats servers.",
+      "priority": "high"
+    },
+    {
+      "id": "rel-2026-02-music-suite",
+      "audience": "all",
+      "publishedAt": "2026-02-15T00:00:00Z",
+      "title": "Music Suite update 🎶",
+      "body": "New tools for large ensembles are available now.",
+      "priority": "normal",
+      "cta": { "label": "What’s new", "href": "https://classseats.app/whats-new" }
+    }
+  ]
+}
