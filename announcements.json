@@ -1,22 +1,31 @@
 {
   "schema": 1,
   "messages": [
+   {
+  "id": "onb-2026-02-welcome-to-classseats-messages",
+  "audience": "onboarding",
+  "publishedAt": "2026-02-16T13:25:42Z",
+  "title": "Welcome to ClassSeats Messages 👋",
+  "body": "Welcome to ClassSeats Messages!\n\nThis is where I’ll share important updates about new features and ClassSeats news.\n\nYou can open Messages anytime from the 💬 icon.",
+  "priority": "high"
+},
+   
     {
-      "id": "onb-2026-02-welcome",
-      "audience": "onboarding",
-      "publishedAt": "2026-02-15T00:00:00Z",
-      "title": "Welcome to ClassSeats 👋",
-      "body": "Your data stays on this device and (optionally) in your Google Drive. No student data is stored on ClassSeats servers.",
-      "priority": "high"
-    },
+  "id": "rel-2026-02-music-suite-now-available",
+  "audience": "all",
+  "publishedAt": "2026-02-16T13:20:27Z",
+  "title": "Music Suite Now Available 🎶",
+  "body": "The Music Suite is now available.\n\nCreate large ensemble layouts, manage sections, and seat students with more control for band, orchestra, and choir.",
+  "priority": "normal"
+},
+   
     {
-      "id": "rel-2026-02-music-suite",
-      "audience": "all",
-      "publishedAt": "2026-12-01T00:00:00Z",
-      "title": "Music Suite update 🎶",
-      "body": "New tools for large ensembles are available now.",
-      "priority": "normal",
-      "cta": { "label": "What’s new", "href": "https://classseats.app/whats-new" }
-    }
+  "id": "rel-2026-02-single-seating-rows-columns-now-available",
+  "audience": "all",
+  "publishedAt": "2026-02-16T13:15:02Z",
+  "title": "Single Seating: Rows & Columns Now Available",
+  "body": "Single-seat layouts now support rows and columns with tag-based placement.\n\nYou can automatically place students by tag while keeping a clean row or column structure.",
+  "priority": "normal"
+}
   ]
 }
