@@ -11,21 +11,25 @@
 },
    
     {
-  "id": "rel-2026-02-music-suite-now-available",
-  "audience": "all",
-  "publishedAt": "2026-02-16T13:20:27Z",
-  "title": "Music Suite Now Available 🎶",
-  "body": "The Music Suite is now available.\n\nCreate large ensemble layouts, manage sections, and seat students with more control for band, orchestra, and choir.",
-  "priority": "normal"
-},
-   
-    {
   "id": "rel-2026-02-single-seating-rows-columns-now-available",
   "audience": "all",
   "publishedAt": "2026-02-16T13:15:02Z",
   "title": "Single Seating: Rows & Columns Now Available",
   "body": "Single-seat layouts now support rows and columns with tag-based placement.\n\nYou can automatically place students by tag while keeping a clean row or column structure.",
   "priority": "normal"
+}, 
+
+{
+  "id": "rel-2026-03-music-suite-now-available",
+  "audience": "all",
+  "publishedAt": "2026-12-01T00:52:01Z",
+  "title": "Music Suite Now Available 🎶",
+  "body": "The Music Suite is now available.\n\nCreate large ensemble layouts, manage sections, and seat students with more control for band, orchestra, and choir.",
+  "priority": "normal",
+  "cta": {
+    "label": "Overview",
+    "href": "https://help.classseats.app/grouping-students/music-ensembles/"
+  }
 }
   ]
 }
