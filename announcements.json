@@ -43,6 +43,15 @@
     "label": "More Info",
     "href": "https://help.classseats.app/grouping-students/how-do-i-use-full-screen-view/"
   }
+},
+
+{
+  "id": "rel-2026-02-19-140017-live-attendance-chips-and-counter",
+  "audience": "all",
+  "publishedAt": "2026-02-19T19:00:17Z",
+  "title": "Live Attendance Chips and Counter",
+  "body": "You will now see a live count of Student absence, tardy, and left early data on each student card in both Desktop and Mobile.  Additionally, by popular demand, we have now added an unassigned counter for you to use to track any student behavior you need to!",
+  "priority": "normal"
 }
   ]
 }
