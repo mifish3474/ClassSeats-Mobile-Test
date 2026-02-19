@@ -17,10 +17,175 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png" />
     <title>ClassSeats — New UI</title>
-    <script type="module" crossorigin src="/assets/index-BrvZf7ki.js"></script>
+    <script type="module" crossorigin src="/assets/index-HgF2K5zg.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-eoK_wZm4.css">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      ;(() => {
+        const STORAGE_PREFIXES = ['classseats_', 'classseats.', 'newui_']
+        const STORAGE_KEYS = new Set(['attendance:lastDate'])
+        const KNOWN_INDEXED_DB_NAMES = ['classseats_auth', 'classseats-cache']
+
+        function canShowRecovery() {
+          return document.visibilityState === 'visible'
+        }
+
+        function clearClassSeatsLocalStorage() {
+          try {
+            const toDelete = []
+            for (let i = 0; i < window.localStorage.length; i += 1) {
+              const key = window.localStorage.key(i)
+              if (!key) continue
+              const matchesPrefix = STORAGE_PREFIXES.some((prefix) => key.startsWith(prefix))
+              if (matchesPrefix || STORAGE_KEYS.has(key)) {
+                toDelete.push(key)
+              }
+            }
+            for (const key of toDelete) {
+              window.localStorage.removeItem(key)
+            }
+          } catch {
+            // Ignore storage access errors in degraded environments.
+          }
+        }
+
+        function clearSessionStorage() {
+          try {
+            window.sessionStorage.clear()
+          } catch {
+            // Ignore storage access errors in degraded environments.
+          }
+        }
+
+        function deleteKnownDatabases() {
+          if (!('indexedDB' in window)) return Promise.resolve()
+          return Promise.all(
+            KNOWN_INDEXED_DB_NAMES.map(
+              (name) =>
+                new Promise((resolve) => {
+                  try {
+                    const req = window.indexedDB.deleteDatabase(name)
+                    req.onsuccess = () => resolve()
+                    req.onerror = () => resolve()
+                    req.onblocked = () => resolve()
+                  } catch {
+                    resolve()
+                  }
+                })
+            )
+          )
+        }
+
+        function hardReload() {
+          window.location.reload()
+        }
+
+        async function unregisterServiceWorkers() {
+          if (!('serviceWorker' in navigator)) return
+          try {
+            const regs = await navigator.serviceWorker.getRegistrations()
+            await Promise.all(regs.map((reg) => reg.unregister()))
+          } catch {
+            // Ignore service worker errors in recovery mode.
+          }
+        }
+
+        async function clearCacheStorage() {
+          if (!('caches' in window)) return
+          try {
+            const keys = await caches.keys()
+            await Promise.all(keys.map((key) => caches.delete(key)))
+          } catch {
+            // Ignore cache errors in recovery mode.
+          }
+        }
+
+        async function repairAppCache() {
+          await unregisterServiceWorkers()
+          await clearCacheStorage()
+          hardReload()
+        }
+
+        async function clearLocalClassSeatsData() {
+          const confirmed = window.confirm(
+            'Clear local ClassSeats data on this device? This is a last-resort recovery action.'
+          )
+          if (!confirmed) return
+          clearClassSeatsLocalStorage()
+          clearSessionStorage()
+          await deleteKnownDatabases()
+          await repairAppCache()
+        }
+
+        function hideOverlay() {
+          const overlay = document.getElementById('cs-boot-recovery')
+          if (!overlay) return
+          overlay.style.display = 'none'
+        }
+
+        function showOverlay() {
+          if (!canShowRecovery()) return
+          if (window.__cs_boot_mounted) return
+          const overlay = document.getElementById('cs-boot-recovery')
+          if (!overlay) return
+          overlay.style.display = 'flex'
+        }
+
+        const overlay = document.createElement('div')
+        overlay.id = 'cs-boot-recovery'
+        overlay.style.display = 'none'
+        overlay.style.position = 'fixed'
+        overlay.style.inset = '0'
+        overlay.style.zIndex = '9999'
+        overlay.style.background = '#f8fafc'
+        overlay.style.color = '#0f172a'
+        overlay.style.alignItems = 'center'
+        overlay.style.justifyContent = 'center'
+        overlay.style.padding = '24px'
+        overlay.innerHTML =
+          '<div style="width:100%;max-width:560px;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:20px;box-shadow:0 10px 30px rgba(15,23,42,.08)">' +
+          '<h1 style="margin:0 0 8px;font-size:1.1rem">Update did not install cleanly.</h1>' +
+          '<p style="margin:0 0 16px;line-height:1.4">ClassSeats could not finish loading. You can reload now, or repair the app cache safely.</p>' +
+          '<div style="display:flex;gap:8px;flex-wrap:wrap">' +
+          '<button id="cs-recovery-reload" type="button">Reload</button>' +
+          '<button id="cs-recovery-repair" type="button">Repair app cache</button>' +
+          '<button id="cs-recovery-advanced-toggle" type="button">Advanced</button>' +
+          '</div>' +
+          '<div id="cs-recovery-advanced" style="margin-top:12px;display:none">' +
+          '<button id="cs-recovery-clear" type="button">Advanced: Clear local ClassSeats data (last resort)</button>' +
+          '</div>' +
+          '</div>'
+        document.body.appendChild(overlay)
+
+        document.getElementById('cs-recovery-reload')?.addEventListener('click', hardReload)
+        document.getElementById('cs-recovery-repair')?.addEventListener('click', () => {
+          repairAppCache()
+        })
+        document.getElementById('cs-recovery-clear')?.addEventListener('click', () => {
+          clearLocalClassSeatsData()
+        })
+        document.getElementById('cs-recovery-advanced-toggle')?.addEventListener('click', () => {
+          const advanced = document.getElementById('cs-recovery-advanced')
+          if (!advanced) return
+          advanced.style.display = advanced.style.display === 'none' ? 'block' : 'none'
+        })
+
+        const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection
+        const effectiveType = connection && typeof connection.effectiveType === 'string' ? connection.effectiveType : ''
+        const bootTimeoutMs = effectiveType === '2g' || effectiveType === 'slow-2g' ? 10_000 : 8_000
+
+        window.addEventListener('classseats:boot-mounted', hideOverlay, { once: true })
+        document.addEventListener('visibilitychange', () => {
+          if (window.__cs_boot_mounted) hideOverlay()
+        })
+
+        window.setTimeout(() => {
+          if (window.__cs_boot_mounted) return
+          showOverlay()
+        }, bootTimeoutMs)
+      })()
+    </script>
   </body>
-  </html>
+</html>
