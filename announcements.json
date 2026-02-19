@@ -30,6 +30,19 @@
     "label": "Overview",
     "href": "https://help.classseats.app/grouping-students/music-ensembles/"
   }
+},
+
+{
+  "id": "rel-2026-02-18-185128-full-screen-view-feature",
+  "audience": "all",
+  "publishedAt": "2026-02-18T23:51:28Z",
+  "title": "Full Screen View Feature!",
+  "body": "Now you can view your seating charts in full screen view - great for displaying a new seating chart on a projector!",
+  "priority": "normal",
+  "cta": {
+    "label": "More Info",
+    "href": "https://help.classseats.app/grouping-students/how-do-i-use-full-screen-view/"
+  }
 }
   ]
 }
