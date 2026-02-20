@@ -17,7 +17,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/icons/icon-192.png" />
     <link rel="icon" type="image/png" sizes="512x512" href="/icons/icon-512.png" />
     <title>ClassSeats — New UI</title>
-    <script type="module" crossorigin src="/assets/index-DlorM6pr.js"></script>
+    <script type="module" crossorigin src="/assets/index-Bp5qBWnd.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-eoK_wZm4.css">
   </head>
   <body>
@@ -110,7 +110,7 @@
 
         async function clearLocalClassSeatsData() {
           const confirmed = window.confirm(
-            'Clear local ClassSeats data on this device? This is a last-resort recovery action.'
+            'Restart will clear local ClassSeats data on this device, then reload the app. Continue?'
           )
           if (!confirmed) return
           clearClassSeatsLocalStorage()
@@ -146,15 +146,13 @@
         overlay.style.padding = '24px'
         overlay.innerHTML =
           '<div style="width:100%;max-width:560px;background:#fff;border:1px solid #e2e8f0;border-radius:14px;padding:20px;box-shadow:0 10px 30px rgba(15,23,42,.08)">' +
-          '<h1 style="margin:0 0 8px;font-size:1.1rem">Update did not install cleanly.</h1>' +
-          '<p style="margin:0 0 16px;line-height:1.4">ClassSeats could not finish loading. You can reload now, or repair the app cache safely.</p>' +
-          '<div style="display:flex;gap:8px;flex-wrap:wrap">' +
-          '<button id="cs-recovery-reload" type="button">Reload</button>' +
-          '<button id="cs-recovery-repair" type="button">Repair app cache</button>' +
-          '<button id="cs-recovery-advanced-toggle" type="button">Advanced</button>' +
-          '</div>' +
-          '<div id="cs-recovery-advanced" style="margin-top:12px;display:none">' +
-          '<button id="cs-recovery-clear" type="button">Advanced: Clear local ClassSeats data (last resort)</button>' +
+          '<h1 style="margin:0 0 8px;font-size:1.1rem">Oops - the most recent update did not install properly. This happens sometimes. Sorry! 😥</h1>' +
+          '<p style="margin:0 0 12px;line-height:1.45">Try the buttons below, in order, to try to get things running again.</p>' +
+          '<p style="margin:0 0 16px;line-height:1.45;color:#334155">If that does not work, delete the shortcut on your home screen, go to mobile.classseats.app, and add a new shortcut to your home screen.</p>' +
+          '<div style="display:flex;flex-direction:column;gap:8px">' +
+          '<button id="cs-recovery-reload" type="button" style="border:1px solid #cbd5e1;border-radius:10px;padding:10px 14px;background:#fff;color:#0f172a;font-weight:600;cursor:pointer">Reload</button>' +
+          '<button id="cs-recovery-repair" type="button" style="border:1px solid #cbd5e1;border-radius:10px;padding:10px 14px;background:#fff;color:#0f172a;font-weight:600;cursor:pointer">Refresh</button>' +
+          '<button id="cs-recovery-restart" type="button" style="border:1px solid #cbd5e1;border-radius:10px;padding:10px 14px;background:#fff;color:#0f172a;font-weight:600;cursor:pointer">Restart</button>' +
           '</div>' +
           '</div>'
         document.body.appendChild(overlay)
@@ -163,13 +161,8 @@
         document.getElementById('cs-recovery-repair')?.addEventListener('click', () => {
           repairAppCache()
         })
-        document.getElementById('cs-recovery-clear')?.addEventListener('click', () => {
+        document.getElementById('cs-recovery-restart')?.addEventListener('click', () => {
           clearLocalClassSeatsData()
-        })
-        document.getElementById('cs-recovery-advanced-toggle')?.addEventListener('click', () => {
-          const advanced = document.getElementById('cs-recovery-advanced')
-          if (!advanced) return
-          advanced.style.display = advanced.style.display === 'none' ? 'block' : 'none'
         })
 
         const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection
