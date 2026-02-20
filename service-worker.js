@@ -1,4 +1,4 @@
-const BUILD_REV = '4363f32ac7fa3250e7f77cfc6572c1447b3f7dce'
+const BUILD_REV = '59103b3c623b555d110691ab263b3320e0602874'
 const CACHE_NAME = `classseats-pwa-${BUILD_REV}`
 const CORE_ASSETS = [
   '/',
@@ -14,6 +14,7 @@ const CORE_ASSETS = [
   '/icons/apple-touch-icon.png',
   './icons/apple-touch-icon.png',
 ]
+const SHELL_ASSETS = ['/', './', '/index.html', './index.html']
 
 const isGoogleRequest = (url) => {
   return (
@@ -44,7 +45,27 @@ self.addEventListener('message', (event) => {
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => cache.addAll(CORE_ASSETS))
+    (async () => {
+      const cache = await caches.open(CACHE_NAME)
+      await Promise.all(
+        CORE_ASSETS.map((asset) =>
+          cache.add(asset).catch(() => null)
+        )
+      )
+
+      let hasShell = false
+      for (const asset of SHELL_ASSETS) {
+        const hit = await cache.match(asset)
+        if (hit) {
+          hasShell = true
+          break
+        }
+      }
+
+      if (!hasShell) {
+        throw new Error('service worker install failed: no cached app shell')
+      }
+    })()
   )
 })
 
