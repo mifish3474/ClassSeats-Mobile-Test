@@ -118,7 +118,7 @@ self.addEventListener('fetch', (event) => {
 
   const isNavRequest = request.mode === 'navigate'
   const isStaticAsset =
-    /\.(js|css|png|svg|ico|webmanifest|json)$/.test(url.pathname) ||
+    /\.(js|css|png|jpg|jpeg|gif|webp|svg|ico|webmanifest|json|mp4|webm)$/.test(url.pathname) ||
     CORE_ASSETS.some((asset) => asset.endsWith(url.pathname))
 
   if (isNavRequest) {

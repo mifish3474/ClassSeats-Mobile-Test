@@ -1,4 +1,4 @@
-const BUILD_REV = 'faede74a7d83cf85dfecf95629d1cd7ddc44ede7'
+const BUILD_REV = '073286b9e2cf44984499de7fac79f2af339395e7'
 const CACHE_NAME = `classseats-pwa-${BUILD_REV}`
 const CORE_ASSETS = [
   '/',
@@ -118,7 +118,7 @@ self.addEventListener('fetch', (event) => {
 
   const isNavRequest = request.mode === 'navigate'
   const isStaticAsset =
-    /\.(js|css|png|svg|ico|webmanifest|json)$/.test(url.pathname) ||
+    /\.(js|css|png|jpg|jpeg|gif|webp|svg|ico|webmanifest|json|mp4|webm)$/.test(url.pathname) ||
     CORE_ASSETS.some((asset) => asset.endsWith(url.pathname))
 
   if (isNavRequest) {
