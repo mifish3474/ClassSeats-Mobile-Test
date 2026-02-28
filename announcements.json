@@ -56,9 +56,9 @@
   ],
   "majorAnnouncements": [
     {
-      "id": "major-dev-sample-2026-02",
+      "id": "major-dev-sampleA-2026-02",
       "type": "major",
-      "introducedAtRev": "811",
+      "introducedAtRev": "813",
       "title": "Big update just landed",
       "body": "Thanks for updating ClassSeats. This major release includes foundational improvements and quality updates across desktop and mobile.",
       "media": [
