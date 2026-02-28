@@ -56,18 +56,38 @@
   ],
   "majorAnnouncements": [
     {
-      "id": "major-dev-sampleB",
+      "id": "major-2026-02-format-demo-r817",
       "type": "major",
-      "introducedAtRev": "814",
-      "title": "HOLD ON NOW - THIS IS A TEST!",
-      "body": "Twas brillig and the slithy toves did gyre and gimble in the wabe. All mimsy were the borogoves, and the mome raths outgrabe.",
+      "introducedAtRev": "817",
+      "title": "Major Update: Easier Student Import + Faster Setup",
+      "subtitle": "New roster mapping tools are live. Here is what changed.",
+      "body": "Legacy fallback body content for older rendering paths.",
+      "sections": [
+        {
+          "kind": "text",
+          "text": "You can now paste large class lists and map fields more quickly. First name, last name, and optional gender are easier to review before import."
+        },
+        {
+          "kind": "image",
+          "src": "/icons/icon-512.png",
+          "alt": "ClassSeats update preview image"
+        },
+        {
+          "kind": "text",
+          "text": "Tip: after mapping, scan the list for name order and skipped genders. Then import and jump straight into seating chart setup."
+        }
+      ],
       "media": [
         {
           "kind": "image",
           "src": "/icons/icon-512.png",
-          "alt": "ClassSeats update preview"
+          "alt": "ClassSeats update preview image"
         }
-      ]
+      ],
+      "cta": {
+        "label": "Read full update notes",
+        "href": "https://help.classseats.app/announcements/"
+      }
     }
   ]
 }
