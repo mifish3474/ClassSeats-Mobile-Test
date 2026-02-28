@@ -56,11 +56,11 @@
   ],
   "majorAnnouncements": [
     {
-      "id": "major-dev-sampleA-2026-02",
+      "id": "major-dev-sampleB",
       "type": "major",
-      "introducedAtRev": "813",
-      "title": "Big update just landed",
-      "body": "Thanks for updating ClassSeats. This major release includes foundational improvements and quality updates across desktop and mobile.",
+      "introducedAtRev": "814",
+      "title": "HOLD ON NOW - THIS IS A TEST!",
+      "body": "Twas brillig and the slithy toves did gyre and gimble in the wabe. All mimsy were the borogoves, and the mome raths outgrabe.",
       "media": [
         {
           "kind": "image",
