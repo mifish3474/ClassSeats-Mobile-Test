@@ -116,9 +116,14 @@ self.addEventListener('fetch', (event) => {
     return
   }
 
+  // Video playback uses byte-range requests (206). Let the browser handle those directly.
+  if (request.headers.has('range')) {
+    return
+  }
+
   const isNavRequest = request.mode === 'navigate'
   const isStaticAsset =
-    /\.(js|css|png|jpg|jpeg|gif|webp|svg|ico|webmanifest|json|mp4|webm)$/.test(url.pathname) ||
+    /\.(js|css|png|jpg|jpeg|gif|webp|svg|ico|webmanifest|json)$/.test(url.pathname) ||
     CORE_ASSETS.some((asset) => asset.endsWith(url.pathname))
 
   if (isNavRequest) {
