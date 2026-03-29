@@ -108,6 +108,22 @@
       "src": "/_media/paste-import-demo.mp4"
     }
   ]
+},
+
+    {
+  "id": "major-2026-03-test-cross-device-sync",
+  "type": "major",
+  "introducedAtRev": "1022",
+  "title": "TEST ONLY: Cross-Device Major Dismissal Sync",
+  "subtitle": "Temporary announcement for dismissal-sync testing on test.classseats.app",
+  "body": "",
+  "media": [],
+  "sections": [
+    {
+      "kind": "text",
+      "text": "This is a temporary test-only major announcement.\n\nUse it to verify that dismissing a major announcement on one device prevents it from reappearing on another device for the same ClassSeats/Drive-backed setup.\n\nThis announcement should be removed before production."
+    }
+  ]
 }
   ]
 }
