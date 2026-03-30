@@ -108,31 +108,8 @@
       "src": "/_media/paste-import-demo.mp4"
     }
   ]
-},
-
-{
-  "id": "major-test-sign-in-cta-preview-r999999",
-  "type": "major",
-  "introducedAtRev": "999999",
-  "title": "TEST ONLY: Sign-in CTA preview",
-  "subtitle": "Preview the in-app sign-in action from a major announcement.",
-  "body": "",
-  "media": [],
-  "sections": [
-    {
-      "kind": "text",
-      "text": "This is a test-only major announcement for validating the new action CTA behavior."
-    },
-    {
-      "kind": "text",
-      "text": "Click the CTA below to open the existing ClassSeats sign-in flow directly from inside the app."
-    }
-  ],
-  "cta": {
-    "type": "action",
-    "label": "Sign in now",
-    "action": "openSignInModal"
-  }
 }
+
+
   ]
 }
