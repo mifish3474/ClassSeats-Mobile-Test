@@ -111,25 +111,25 @@
 },
 
 {
-  "id": "major-1035-sign-in-is-coming",
+  "id": "major-1114-sign-in-now-required",
   "type": "major",
-  "introducedAtRev": "1035",
-  "title": "Sign-in is coming",
-  "body": "Starting April 8, you’ll need to sign in to use Pro features.\n\nThis helps keep your work saved and consistent across devices.\nYour student data still stays on your device or Google Drive.\n\nPro features remain free until September 1.\n\nIf you'd like, you can sign-in now using the button, below.",
+  "introducedAtRev": "1114",
+  "title": "Sign In Now Required",
+  "subtitle": "No Credit Card - Free for the 25/26 School Year!",
+  "body": "",
   "media": [],
   "sections": [
     {
       "kind": "text",
-      "text": "Starting April 8, you’ll need to sign in to use Pro features.\n\nThis helps keep your work saved and consistent across devices.\nYour student data still stays on your device or Google Drive.\n\nPro features remain free until September 1.\n\nIf you'd like, you can sign-in now using the button, below."
+      "text": "Starting today, you will need to be signed in to access the full features of ClassSeats Pro.  Don't worry - it's easy!  All you need to do is enter your email.  No credit cards, no passwords, and no student data is sent to our servers.  \n\nYou can always click the \"Unlock Pro\" button at the top of the screen to sign in."
     }
   ],
   "cta": {
-    "label": "Sign In Now",
+    "label": "Sign In Now!",
     "type": "action",
     "action": "openSignInModal"
   }
 }
-
 
   ]
 }
