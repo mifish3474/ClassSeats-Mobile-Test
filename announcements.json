@@ -1,135 +1,42 @@
 {
   "schema": 1,
   "messages": [
-   {
-  "id": "onb-2026-02-welcome-to-classseats-messages",
-  "audience": "onboarding",
-  "publishedAt": "2026-02-16T13:25:42Z",
-  "title": "Welcome to ClassSeats Messages 👋",
-  "body": "Welcome to ClassSeats Messages!\n\nThis is where I’ll share important updates about new features and ClassSeats news.\n\nYou can open Messages anytime from the 💬 icon.",
-  "priority": "high"
-},
-   
     {
-  "id": "rel-2026-02-single-seating-rows-columns-now-available",
-  "audience": "all",
-  "publishedAt": "2026-02-16T13:15:02Z",
-  "title": "Single Seating: Rows & Columns Now Available",
-  "body": "Single-seat layouts now support rows and columns with tag-based placement.\n\nYou can automatically place students by tag while keeping a clean row or column structure.",
-  "priority": "normal"
-}, 
-
-{
-  "id": "rel-2026-03-music-suite-now-available",
-  "audience": "all",
-  "publishedAt": "2026-12-01T00:52:01Z",
-  "title": "Music Suite Now Available 🎶",
-  "body": "The Music Suite is now available.\n\nCreate large ensemble layouts, manage sections, and seat students with more control for band, orchestra, and choir.",
-  "priority": "normal",
-  "cta": {
-    "label": "Overview",
-    "href": "https://help.classseats.app/grouping-students/music-ensembles/"
-  }
-},
-
-{
-  "id": "rel-2026-02-18-185128-full-screen-view-feature",
-  "audience": "all",
-  "publishedAt": "2026-02-18T23:51:28Z",
-  "title": "Full Screen View Feature!",
-  "body": "Now you can view your seating charts in full screen view - great for displaying a new seating chart on a projector!",
-  "priority": "normal",
-  "cta": {
-    "label": "More Info",
-    "href": "https://help.classseats.app/grouping-students/how-do-i-use-full-screen-view/"
-  }
-},
-
-{
-  "id": "rel-2026-02-19-140017-live-attendance-chips-and-counter",
-  "audience": "all",
-  "publishedAt": "2026-02-19T19:00:17Z",
-  "title": "Live Attendance Chips and Counter",
-  "body": "You will now see a live count of Student absence, tardy, and left early data on each student card in both Desktop and Mobile.  Additionally, by popular demand, we have now added an unassigned counter for you to use to track any student behavior you need to!",
-  "priority": "normal"
-}
-  ],
-  "majorAnnouncements": [
+      "id": "onb-2026-02-welcome-to-classseats-messages",
+      "audience": "onboarding",
+      "publishedAt": "2026-02-16T13:25:42Z",
+      "title": "Welcome to ClassSeats Messages 👋",
+      "body": "Welcome to ClassSeats Messages!\n\nThis is where I’ll share important updates about new features and ClassSeats news.\n\nYou can open Messages anytime from the 💬 icon.",
+      "priority": "high"
+    },
     {
-      "id": "major-2026-02-format-demo-r817",
-      "type": "major",
-      "introducedAtRev": "817",
-      "title": "Major Update: Easier Student Import + Faster Setup",
-      "subtitle": "New roster mapping tools are live. Here is what changed.",
-      "body": "Legacy fallback body content for older rendering paths.",
-      "sections": [
-        {
-          "kind": "text",
-          "text": "You can now paste large class lists and map fields more quickly. First name, last name, and optional gender are easier to review before import."
-        },
-        {
-          "kind": "image",
-          "src": "/icons/icon-512.png",
-          "alt": "ClassSeats update preview image"
-        },
-        {
-          "kind": "text",
-          "text": "Tip: after mapping, scan the list for name order and skipped genders. Then import and jump straight into seating chart setup."
-        }
-      ],
-      "media": [
-        {
-          "kind": "image",
-          "src": "/icons/icon-512.png",
-          "alt": "ClassSeats update preview image"
-        }
-      ],
+      "id": "rel-2026-02-single-seating-rows-columns-now-available",
+      "audience": "all",
+      "publishedAt": "2026-02-16T13:15:02Z",
+      "title": "Single Seating: Rows & Columns Now Available",
+      "body": "Single-seat layouts now support rows and columns with tag-based placement.\n\nYou can automatically place students by tag while keeping a clean row or column structure.",
+      "priority": "normal"
+    },
+    {
+      "id": "rel-2026-02-18-185128-full-screen-view-feature",
+      "audience": "all",
+      "publishedAt": "2026-02-18T23:51:28Z",
+      "title": "Full Screen View Feature!",
+      "body": "Now you can view your seating charts in full screen view - great for displaying a new seating chart on a projector!",
+      "priority": "normal",
       "cta": {
-        "label": "Read full update notes",
-        "href": "https://help.classseats.app/announcements/"
+        "label": "More Info",
+        "href": "https://help.classseats.app/grouping-students/how-do-i-use-full-screen-view/"
       }
     },
-
     {
-  "id": "major-840-easier-student-import",
-  "type": "major",
-  "introducedAtRev": "840",
-  "title": "Easier Student Import!",
-  "subtitle": "New roster import tool is live (and much easier!)",
-  "body": "",
-  "media": [],
-  "sections": [
-    {
-      "kind": "text",
-      "text": "ClassSeats is very excited to share a new feature to really save you time when you next need to create a new class.  Now you can copy and paste your student information from . . . anywhere!  Emails, Student Information System, PDFs - anything!  Copy. Paste. Drag. Done!"
-    },
-    {
-      "kind": "video",
-      "src": "/_media/paste-import-demo.mp4"
-    }
-  ]
-},
-
-{
-  "id": "major-1114-sign-in-now-required",
-  "type": "major",
-  "introducedAtRev": "1114",
-  "title": "Sign In Now Required",
-  "subtitle": "No Credit Card - Free for the 25/26 School Year!",
-  "body": "",
-  "media": [],
-  "sections": [
-    {
-      "kind": "text",
-      "text": "Starting today, you will need to be signed in to access the full features of ClassSeats Pro.  Don't worry - it's easy!  All you need to do is enter your email.  No credit cards, no passwords, and no student data is sent to our servers.  \n\nYou can always click the \"Unlock Pro\" button at the top of the screen to sign in."
+      "id": "rel-2026-02-19-140017-live-attendance-chips-and-counter",
+      "audience": "all",
+      "publishedAt": "2026-02-19T19:00:17Z",
+      "title": "Live Attendance Chips and Counter",
+      "body": "You will now see a live count of Student absence, tardy, and left early data on each student card in both Desktop and Mobile.  Additionally, by popular demand, we have now added an unassigned counter for you to use to track any student behavior you need to!",
+      "priority": "normal"
     }
   ],
-  "cta": {
-    "label": "Sign In Now!",
-    "type": "action",
-    "action": "openSignInModal"
-  }
-}
-
-  ]
+  "majorAnnouncements": []
 }
