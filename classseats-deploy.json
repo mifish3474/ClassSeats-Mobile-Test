@@ -4,8 +4,8 @@
   "domain": "test-mobile.classseats.app",
   "deployRepo": "mifish3474/ClassSeats-Mobile-Test",
   "sourceRepository": "mifish3474/ClassSeats-Codex",
-  "sourceRef": "test/textSize",
-  "sourceSha": "7bbce8f49c9f1686db6221ae53b7945740efc1dd",
-  "sourceRunId": "29661220456",
+  "sourceRef": "test/demoFixes",
+  "sourceSha": "3295d5e45eb7b430be705519b5c3158810c95a7d",
+  "sourceRunId": "29661791234",
   "sourceRunAttempt": "1"
 }
