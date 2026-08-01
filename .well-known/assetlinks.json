@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.classwaresolutions.classseatscompanion",
+      "sha256_cert_fingerprints": [
+        "10:E5:8F:9D:F1:15:47:9D:CE:2B:41:A0:D6:35:A1:07:65:93:CC:45:AD:E2:1C:86:D2:0D:1D:A6:B2:88:AB:39"
+      ]
+    }
+  }
+]
