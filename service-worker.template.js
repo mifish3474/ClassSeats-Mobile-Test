@@ -40,6 +40,15 @@ const isExternal = (url, origin) => {
 self.addEventListener('message', (event) => {
   if (event?.data?.type === 'SKIP_WAITING') {
     self.skipWaiting()
+    return
+  }
+  if (event?.data?.type === 'CLASSSEATS_SW_DEBUG_VERSION') {
+    event.source?.postMessage({
+      type: 'CLASSSEATS_SW_DEBUG_VERSION_RESULT',
+      requestId: event.data.requestId,
+      buildRev: BUILD_REV,
+      cacheName: CACHE_NAME,
+    })
   }
 })
 
@@ -106,6 +115,15 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(request).catch(
         () => new Response('Offline', { status: 503, statusText: 'Offline' })
+      )
+    )
+    return
+  }
+
+  if (url.pathname.endsWith('/service-worker.js') && url.searchParams.has('cs-sw-debug')) {
+    event.respondWith(
+      fetch(request, { cache: 'no-store' }).catch(
+        () => new Response('Unavailable', { status: 503, statusText: 'Unavailable' })
       )
     )
     return
