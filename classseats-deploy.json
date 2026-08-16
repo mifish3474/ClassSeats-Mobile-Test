@@ -4,8 +4,8 @@
   "domain": "test-mobile.classseats.app",
   "deployRepo": "mifish3474/ClassSeats-Mobile-Test",
   "sourceRepository": "mifish3474/ClassSeats-Codex",
-  "sourceRef": "test/creatorAttribution",
-  "sourceSha": "93ad8b4340ccd800776ba9a07767dcc1b2bb03b7",
-  "sourceRunId": "31886134781",
+  "sourceRef": "test/sep-1-monetization-readiness",
+  "sourceSha": "e86305710b562176d45f96edb7bd3c39c5299ec0",
+  "sourceRunId": "31973588618",
   "sourceRunAttempt": "1"
 }
