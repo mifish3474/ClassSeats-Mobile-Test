@@ -38,5 +38,20 @@
       "priority": "normal"
     }
   ],
-  "majorAnnouncements": []
+  "majorAnnouncements": [
+    {
+  "id": "major-1793-classseats-pro-is-now-available",
+  "type": "major",
+  "introducedAtRev": "1793",
+  "title": "ClassSeats Pro is now available!",
+  "body": "",
+  "media": [],
+  "sections": [
+    {
+      "kind": "text",
+      "text": "ClassSeats Pro is now available!\n\nClassSeats Pro is now live. Eligible new accounts receive one 45-day free trial, and Early Adopter pricing is available through August 31, 2027.\n\nEarly Adopter pricing is $20/year plus applicable sales tax. After the Early Adopter window, new subscriptions will move to the standard $35/year price.\n\nYour student and classroom data still stays on this device or in your Google Drive."
+    }
+  ]
+}
+  ]
 }
