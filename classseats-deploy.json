@@ -4,8 +4,8 @@
   "domain": "test-mobile.classseats.app",
   "deployRepo": "mifish3474/ClassSeats-Mobile-Test",
   "sourceRepository": "mifish3474/ClassSeats-Codex",
-  "sourceRef": "test/localFlow",
+  "sourceRef": "test/gradebook",
   "sourceSha": "83a86bc74bbf5293c420d1110cbf094e036e467d",
-  "sourceRunId": "36163609798",
+  "sourceRunId": "36597707253",
   "sourceRunAttempt": "1"
 }
