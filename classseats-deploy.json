@@ -4,8 +4,8 @@
   "domain": "test-mobile.classseats.app",
   "deployRepo": "mifish3474/ClassSeats-Mobile-Test",
   "sourceRepository": "mifish3474/ClassSeats-Codex",
-  "sourceRef": "test/notesMerge",
-  "sourceSha": "3f397cb5cff704b59aa8431ca0d37cb91fe39e08",
-  "sourceRunId": "37797157661",
+  "sourceRef": "test/grading-notes",
+  "sourceSha": "4ef81a2ef8d7e433590788dc2c76a64363698ae8",
+  "sourceRunId": "40775425086",
   "sourceRunAttempt": "1"
 }
